@@ -3,8 +3,8 @@
 class console::systemd () {
   if $facts['virtual'] == 'kvm' {
     service { 'getty@tty1.service':
-      ensure => stopped,
-      enable => false,
+      ensure => running,
+      enable => true,
     }
 
     service { 'serial-getty@ttyS0.service':
