@@ -15,7 +15,7 @@ class console::systemd () {
     file_line { 'grub_input':
       ensure => present,
       path   => '/etc/default/grub',
-      line   => 'GRUB_TERMINAL_INPUT="serial"',
+      line   => 'GRUB_TERMINAL_INPUT="console serial"',
       match  => '^GRUB_TERMINAL_INPUT=',
       notify => Exec['update grub'],
     }
@@ -23,7 +23,7 @@ class console::systemd () {
     file_line { 'grub_output':
       ensure => present,
       path   => '/etc/default/grub',
-      line   => 'GRUB_TERMINAL_OUTPUT="serial"',
+      line   => 'GRUB_TERMINAL_OUTPUT="console serial"',
       match  => '^GRUB_TERMINAL_OUTPUT=',
       notify => Exec['update grub'],
     }
