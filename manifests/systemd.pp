@@ -37,7 +37,8 @@ class console::systemd () {
     }
 
     exec { 'update grub':
-      command     => '/usr/bin/grub-mkconfig -o /boot/grub/grub.cfg',
+      command     => 'grub-mkconfig -o /boot/grub/grub.cfg',
+      path        => '/usr/sbin:/usr/bin:/sbin:/bin',
       refreshonly => true,
     }
   }
