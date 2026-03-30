@@ -1,16 +1,12 @@
 {
   "name": "halyard-console",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure console",
   "source": "https://github.com/halyard/puppet-console",
   "project_page": "https://github.com/halyard/puppet-console",
   "issues_url": "https://github.com/halyard/puppet-console/issues",
-  "dependencies": [
-
-  ],
-  "operatingsystem_support": [
-
-  ]
+  "dependencies": [],
+  "operatingsystem_support": []
 }
